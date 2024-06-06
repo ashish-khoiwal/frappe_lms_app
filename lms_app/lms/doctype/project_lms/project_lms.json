@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PRLMS-{######}",
+ "creation": "2024-05-30 12:53:18.533289",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_u3zb",
+  "amended_from",
+  "project_name",
+  "construction_type",
+  "site",
+  "project_type",
+  "customer",
+  "column_break_putl",
+  "no_of_bedrooms",
+  "no_of_kitchens",
+  "no_of_bathrooms",
+  "description",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_u3zb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project_LMS",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "construction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Construction Type",
+   "options": "RENOVATION\nNEW RENOVATION\nNEW CONSTRUCTION",
+   "reqd": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Site",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "APARTMENT\nINDEPENDENT HOUSE\nVILLA\nVILLAMENT",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_bedrooms",
+   "fieldtype": "Int",
+   "label": "No of Bedrooms",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_kitchens",
+   "fieldtype": "Int",
+   "label": "No of Kitchens",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_bathrooms",
+   "fieldtype": "Int",
+   "label": "No of Bathrooms",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fetch_from": "site.address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_putl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-31 15:06:48.510219",
+ "modified_by": "Administrator",
+ "module": "LMS",
+ "name": "Project_LMS",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "project_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}

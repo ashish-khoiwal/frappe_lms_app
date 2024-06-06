@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FV-{lead_category}-{######}",
+ "creation": "2024-05-30 15:59:31.992139",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_obgi",
+  "amended_from",
+  "fieldvisit_type",
+  "appointment",
+  "column_break_iiqe",
+  "lead",
+  "assigned_to",
+  "lead_category"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_obgi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "FollowUp_LMS",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Datetime",
+   "label": "Appointment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iiqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead_LMS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "fieldvisit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field Visit Type",
+   "options": "CUSTOMER LOCATION\nSITE LOCATION",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "lead.lead_category",
+   "fieldname": "lead_category",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Lead Category",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-30 16:26:02.865591",
+ "modified_by": "Administrator",
+ "module": "LMS",
+ "name": "Field Visit_LMS",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:STR-{######}",
+ "creation": "2024-05-30 14:10:09.658604",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ysb6",
+  "amended_from",
+  "store_name",
+  "address",
+  "column_break_klmf",
+  "gst",
+  "store_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ysb6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Store_LMS",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "store_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Store Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_klmf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gst",
+   "fieldtype": "Data",
+   "label": "GST"
+  },
+  {
+   "default": "ACTIVE",
+   "fieldname": "store_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Store Status",
+   "options": "ACTIVE\nINACTIVE",
+   "permlevel": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "sort_options": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-30 14:55:43.248292",
+ "modified_by": "Administrator",
+ "module": "LMS",
+ "name": "Store_LMS",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

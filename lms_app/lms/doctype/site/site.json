@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SI-{######}",
+ "creation": "2024-05-30 12:12:29.120581",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_2aal",
+  "amended_from",
+  "site_name",
+  "site_status",
+  "site_size",
+  "measurement_unit",
+  "built_up_area_sqft",
+  "expected_completion",
+  "site_images",
+  "column_break_dbzf",
+  "site_type",
+  "number_of_floors",
+  "houseplot_no",
+  "address",
+  "location",
+  "area"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_2aal",
+   "fieldtype": "Section Break",
+   "label": "Site Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "site_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Site Status",
+   "options": "FOUNDATION LAID\nSTRUCTURAL FRAMING\nROOFING\nEXTERIORS FINISH\nFIXTURES\nINTERIORS FINISH\nCOMPLETED\nRENOVATION",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site_size",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Site Size",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "built_up_area_sqft",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Built Up Area (SQFT)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_completion",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Completion",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dbzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "label": "Site Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "RESIDENTIAL",
+   "fieldname": "site_type",
+   "fieldtype": "Select",
+   "label": "Site Type",
+   "options": "RESIDENTIAL\nINDUSTRIAL\nCOMMERCIAL",
+   "reqd": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "measurement_unit",
+   "fieldtype": "Select",
+   "label": "Measurement Unit",
+   "options": "ACRES\nSQFT",
+   "reqd": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "number_of_floors",
+   "fieldtype": "Int",
+   "label": "Number of Floors",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "houseplot_no",
+   "fieldtype": "Data",
+   "label": "House/Plot No"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Select",
+   "label": "Area",
+   "options": "South Bangalore\nNorth Bangalore\nEast Bangalore\nWest Bangalore",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "site_images",
+   "fieldtype": "Attach Image",
+   "label": "Site Images",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-30 12:50:09.277326",
+ "modified_by": "Administrator",
+ "module": "LMS",
+ "name": "Site",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "site_name",
+ "track_changes": 1
+}

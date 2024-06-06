@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:TFL{######}",
+ "creation": "2024-05-30 16:33:30.552933",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tfl_product_table_section",
+  "sub_category",
+  "group",
+  "size",
+  "unit_of_measure",
+  "brand",
+  "price",
+  "finish",
+  "status",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "sub_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sub Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Size",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit of Measure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "non_negative": 1,
+   "options": "currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "finish",
+   "fieldtype": "Data",
+   "label": "Finish",
+   "reqd": 1
+  },
+  {
+   "default": "ACTIVE",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "ACTIVE\nINACTIVE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tfl_product_table_section",
+   "fieldtype": "Section Break",
+   "label": "TFL Product Table"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "USD",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-31 11:39:55.042382",
+ "modified_by": "Administrator",
+ "module": "LMS",
+ "name": "TFL",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
